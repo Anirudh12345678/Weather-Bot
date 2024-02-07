@@ -71,10 +71,10 @@ public class WeatherManager {
         sendMail(message.toString());
     }
     public void sendMail(String mes){
-        String recipient = "anisiva2005@gmail.com";
+        String recipient = "Receivers mail";
 
         // email ID of  Sender.
-        String sender = "anisiva2005@gmail.com";
+        String sender = "Your mail";
 
         // using host as localhost
         String host = "192.168.0.103";
