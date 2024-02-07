@@ -77,7 +77,7 @@ public class WeatherManager {
         String sender = "anisiva2005@gmail.com";
 
         // using host as localhost
-        String host = "127.0.0.1";
+        String host = "192.168.0.103";
 
         // Getting system properties
         Properties properties = System.getProperties();
@@ -85,8 +85,6 @@ public class WeatherManager {
         // Setting up mail server
         properties.setProperty("mail.smtp.host", host);
         properties.put("mail.smtp.port","25");
-        properties.put("mail.smtp.auth","true");
-        properties.put("mail.smtp.starttls.enable","true");
         // creating session object to get properties
         Session session = Session.getDefaultInstance(properties);
         try
@@ -107,7 +105,7 @@ public class WeatherManager {
             message.setText(mes);
 
             // Send email.
-            Transport.send(message,sender,"Maha123thi$");
+            Transport.send(message);
             System.out.println("Mail successfully sent");
         }
         catch (MessagingException mex)
