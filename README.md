@@ -1,6 +1,8 @@
 Automated Weather Bot
 
-An automated weather bot using java and a localized smpt server.
+An automated weather bot using java and a localized smpt server. 
+
+Here I have used the Visual crossing weather API(free) 
 
 This script can be run any time to forward the mail to the smtp client.
 
