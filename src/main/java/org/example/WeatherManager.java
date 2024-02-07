@@ -25,9 +25,9 @@ import java.util.Calendar;
 import java.util.Properties;
 public class WeatherManager {
     String endPoint = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/";
-    String Location = "Chennai";
+    String Location = "Your location";
     String unitGroup = "metric";
-    String Key = "5DJFECGBDEDQYRDLBQF9K9NSC";
+    String Key = "Your API Key";
     String time = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss").format(Calendar.getInstance().getTime()).replace('_','T');
 
     public void createEndPoint() throws URISyntaxException, IOException {
