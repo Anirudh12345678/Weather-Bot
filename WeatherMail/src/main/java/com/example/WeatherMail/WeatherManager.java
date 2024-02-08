@@ -35,9 +35,9 @@ public class WeatherManager {
 
     private MailProperties mailProperties;
     static String endPoint = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/";
-    static String Location = "Chennai";
+    static String Location = "";
     static String unitGroup = "metric";
-    static String Key = "5DJFECGBDEDQYRDLBQF9K9NSC";
+    static String Key = "";
     static String time = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss").format(Calendar.getInstance().getTime()).replace('_','T');
 
     public void createEndPoint() throws URISyntaxException, IOException, MessagingException {
@@ -86,51 +86,9 @@ public class WeatherManager {
         helper.setSubject("Today's Forecast");
         helper.setFrom(mailProperties.getUsername());
         helper.setText(mes);
-        String [] recepients = {"anisiva2005@gmail.com","aniuma05@gmail.com","smahathi99@gmail.com","ksridhar2005@gmail.com"};
+        String [] recepients = {};
         helper.setTo(recepients);
         sender.send(mimeMessage);
         System.out.println("Mail sent!");
     }
-//        String recipient = "anisiva2005@gmail.com";
-//
-//        // email ID of  Sender.
-//        String sender = "anisiva2005@gmail.com";
-//
-//        // using host as localhost
-//        String host = "192.168.0.103";
-//
-//        // Getting system properties
-//        Properties properties = System.getProperties();
-//
-//        // Setting up mail server
-//        properties.setProperty("mail.smtp.host", host);
-//        properties.put("mail.smtp.port","25");
-//        // creating session object to get properties
-//        Session session = Session.getDefaultInstance(properties);
-//        try
-//        {
-//            // MimeMessage object.
-//            MimeMessage message = new MimeMessage(session);
-//
-//            // Set From Field: adding senders email to from field.
-//            message.setFrom(new InternetAddress(sender));
-//
-//            // Set To Field: adding recipient's email to from field.
-//            message.addRecipient(Message.RecipientType.TO, new InternetAddress(recipient));
-//
-//            // Set Subject: subject of the email
-//            message.setSubject("Todays Forecast");
-//
-//            // set body of the email.
-//            message.setText(mes);
-//
-//            // Send email.
-//            Transport.send(message);
-//            System.out.println("Mail successfully sent");
-//        }
-//        catch (MessagingException mex)
-//        {
-//            mex.printStackTrace();
-//        }
-//    }
 }
